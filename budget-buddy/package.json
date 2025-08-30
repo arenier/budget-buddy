@@ -1,5 +1,5 @@
 {
-  "name": "my-turborepo",
+  "name": "budget-buddy",
   "private": true,
   "scripts": {
     "build": "turbo run build",
