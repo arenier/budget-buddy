@@ -4,12 +4,14 @@
   "private": true,
   "scripts": {
     "build": "turbo run build",
-    "dev": "turbo run dev",
+    "start": "turbo run start",
+    "start:dev": "turbo run start:dev --filter",
     "lint": "turbo run lint",
     "check-types": "turbo run check-types"
   },
   "devDependencies": {
     "@biomejs/biome": "2.2.2",
+    "@repo/typescript-config": "workspace:*",
     "turbo": "^2.5.6",
     "typescript": "5.9.2"
   },
