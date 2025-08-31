@@ -1,7 +1,16 @@
 {
-  "eslint.workingDirectories": [
-    {
-      "mode": "auto"
-    }
-  ]
+  "editor.defaultFormatter": "biomejs.biome",
+  "editor.formatOnSave": true,
+
+  // Active les quick-fix et l’orga d’imports de Biome au save (optionnel mais pratique)
+  "editor.codeActionsOnSave": {
+    "source.fixAll.biome": "explicit"
+  },
+
+  // Demande à l’extension d'utiliser uniquement si une config existe (évite le bruit hors-projet)
+  "biome.requireConfiguration": true,
+
+  // (Souvent clé) Indique explicitement le binaire LSP à utiliser
+  // NB: clé renommée: biome.lspBin -> biome.lsp.bin
+  "biome.lsp.bin": "node_modules/.bin/biome"
 }
