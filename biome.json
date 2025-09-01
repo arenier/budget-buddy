@@ -5,6 +5,18 @@
     "clientKind": "git",
     "useIgnoreFile": false
   },
+  "overrides": [
+    {
+      "includes": ["src/**/*.service.ts", "src/**/*.controller.ts"],
+      "linter": {
+        "rules": {
+          "style": {
+            "useImportType": "off"
+          }
+        }
+      }
+    }
+  ],
   "files": {
     "ignoreUnknown": false
   },
