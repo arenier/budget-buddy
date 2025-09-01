@@ -14,7 +14,7 @@ import { AppService } from './app.service';
       expandVariables: true,
       validationSchema: envValidationSchema,
       validationOptions: {
-        allowUnknown: false,
+        allowUnknown: true,
         abortEarly: true,
       },
     }),
