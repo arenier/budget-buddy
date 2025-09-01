@@ -1,24 +1,11 @@
 import { Module } from '@nestjs/common';
-import { ConfigModule } from '@nestjs/config';
-import { envValidationSchema } from '../configs/env.validation.schema';
-import { configurations } from '../configs/index';
+import { AppConfigModule } from '../configs/config.module';
+import { DatabaseConfigModule } from '../database/database-config.module';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 
 @Module({
-  imports: [
-    ConfigModule.forRoot({
-      load: configurations,
-      isGlobal: true,
-      cache: true,
-      expandVariables: true,
-      validationSchema: envValidationSchema,
-      validationOptions: {
-        allowUnknown: true,
-        abortEarly: true,
-      },
-    }),
-  ],
+  imports: [AppConfigModule, DatabaseConfigModule],
   controllers: [AppController],
   providers: [AppService],
 })
