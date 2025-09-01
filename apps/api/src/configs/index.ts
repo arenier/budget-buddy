@@ -1,4 +1,4 @@
-import ApiConfig from './api';
-import DatabaseConfig from './database';
+import { appConfig } from './app.config';
+import { databaseConfig } from './database.config';
 
-export default [ApiConfig, DatabaseConfig];
+export const configurations = [appConfig, databaseConfig];
