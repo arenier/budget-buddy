@@ -12,7 +12,6 @@ import { AppService } from './app.service';
       isGlobal: true,
       cache: true,
       expandVariables: true,
-      // envFilePath: ['.env.local', '.env'],
       validationSchema: envValidationSchema,
       validationOptions: {
         allowUnknown: false,
